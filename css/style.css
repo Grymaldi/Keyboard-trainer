@@ -1,0 +1,56 @@
+body {
+  background-color: #142e49c2;
+  font-family: "Signika Negative", sans-serif;
+  margin: 0;
+  /* обнуление отступов браузера */
+  color: #18191f;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+section {
+  width: 1200px;
+  height: 500px;
+  margin: 0 auto;
+  color: aliceblue;
+}
+
+.expression {
+  text-align: center;
+  font-size: 2.5em;
+  height: 50%;
+  margin-top: 8%;
+}
+
+.expression p {
+  margin-bottom: 2%;
+}
+
+.expression i {
+  color: wheat;
+}
+
+#input {
+  border: 7px solid #99b4d1;
+  border-radius: 14px;
+  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 82px;
+  letter-spacing: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  vertical-align: middle;
+  width: 90%;
+  font-size: 4em;
+}
+
+.start {
+  text-align: center;
+  margin-top: 2%;
+  color: darkorange;
+  font-weight: 900;
+}
