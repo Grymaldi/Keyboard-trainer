@@ -11,7 +11,7 @@ fetch(`https://type.fit/api/quotes`)
 function randomQuote(quotes) {
   console.log(quotes);
 
-  this.addEventListener("keydown", (e) => {
+  this.addEventListener("keyup", (e) => {
     if (e.which === 13) {
       //старт при нажатии `Enter`
       const quote = _.sample(quotes); // получаем случайную цитату из массива
@@ -35,12 +35,18 @@ function textOutput() {
   console.log(stringArr);
 
   stringArr.map((letter) => {
+    let inputLetters = [];
+    let wrongLetters = 0;
+
     document.addEventListener("keyup", (e) => {
       const key = e.key; //какая кнопка была нажата на клавиатуре
+      const overlap = _.includes(stringArr, key, letter); //проверка совпадения нажатой кнопки и символа в массиве
 
-      const overlap = _.includes(stringArr, key, letter); //проверка совпадения нажатой кнопки и наличия буквы в массиве
       if (overlap === true) {
-        input.textContent = key;
+        inputLetters.push(key);
+        input.textContent = inputLetters.join(""); //Вывод текста в `div`
+      } else {
+        console.log(wrongLetters++); // Подсчет неправильных нажатий
       }
     });
   });
